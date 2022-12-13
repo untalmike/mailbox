@@ -4,8 +4,8 @@ import Header from './components/Header'
 
 function App() {
 
-  const [motivo, setMotivo] = useState('')
-  
+  const [motivo, setMotivo] = useState({})
+
   return (
     <div className="container mx-auto mt-20">
       <Header/>
