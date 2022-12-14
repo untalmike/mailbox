@@ -98,7 +98,7 @@ const Formulario = ({motivo, setMotivo}) => {
                             </div>
                         </div>
 
-                        <div className=' flex bg-teal-600 text-white hover:bg-teal-500 border-2 mx-6 px-6 py-2 rounded-xl text-gray-700 bg-white hover:bg-gray-900 hover:text-white text-center align-middle'>
+                        <div className=' flex bg-teal-600 text-white hover:bg-teal-500 border-2 mx-6 px-6 py-2 rounded-xl text-center align-middle'>
                             <input type="submit" value="Continuar" className='border-1 border-gray-800 uppercase'/>
                         </div>
                         
