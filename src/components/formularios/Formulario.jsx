@@ -28,8 +28,6 @@ const Formulario = ({motivo, setMotivo}) => {
     const [botones, setBotones] = useState(0)
     console.log(botones)
 
-    console.log(nombreEmpleado)
-    console.log(numeroEmpleado)
     const imagenes = {
         claim,
         suggestion,
