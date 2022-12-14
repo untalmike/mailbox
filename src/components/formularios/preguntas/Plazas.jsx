@@ -1,10 +1,10 @@
 
-const Plazas = ({setPlaza, imagenes}) => {
+const Plazas = ({anonimato, numeroEmpleado, nombreEmpleado, setPlaza, imagenes}) => {
 
     const {complain} = imagenes
     return (
         <>
-            <div className='flex space-x-8 px-8 w-full'>
+            <div className={anonimato === 'Sí' && numeroEmpleado !== "" && nombreEmpleado !=="" || anonimato === 'No' && numeroEmpleado.includes("") && nombreEmpleado.includes("") ?'flex space-x-8 px-8 w-full': 'hidden'}>
                 <div className="relative max-w-md mx-auto md:max-w-2xl min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-xl mt-16">
                     <div className="px-6">
                         <div className="flex flex-wrap justify-center">
@@ -18,7 +18,7 @@ const Plazas = ({setPlaza, imagenes}) => {
                                     <div className="p-3 text-center">
                                         <div className="p-3 text-center">
                                             <span className="text-xl font-bold block uppercase tracking-wide text-slate-700">3,360</span>
-                                            <span className="text-sm text-slate-400">Monterrey Obispado</span>
+                                            <span className="text-sm text-slate-400">Casos</span>
                                         </div>
                                     </div>
                                 </div>
@@ -52,7 +52,7 @@ const Plazas = ({setPlaza, imagenes}) => {
                                     <div className="p-3 text-center">
                                         <div className="p-3 text-center">
                                             <span className="text-xl font-bold block uppercase tracking-wide text-slate-700">2,360</span>
-                                            <span className="text-sm text-slate-400">Monterrey 5 de mayo</span>
+                                            <span className="text-sm text-slate-400">Casos</span>
                                         </div>
                                     </div>
                                 </div>
@@ -86,7 +86,7 @@ const Plazas = ({setPlaza, imagenes}) => {
                                     <div className="p-3 text-center">
                                         <div className="p-3 text-center">
                                             <span className="text-xl font-bold block uppercase tracking-wide text-slate-700">1,360</span>
-                                            <span className="text-sm text-slate-400">Monterrey Tápia</span>
+                                            <span className="text-sm text-slate-400">Casos</span>
                                         </div>
                                     </div>
                                 </div>
@@ -120,7 +120,7 @@ const Plazas = ({setPlaza, imagenes}) => {
                                     <div className="p-3 text-center">
                                         <div className="p-3 text-center">
                                             <span className="text-xl font-bold block uppercase tracking-wide text-slate-700">5,360</span>
-                                            <span className="text-sm text-slate-400">Monterrey Arteaga</span>
+                                            <span className="text-sm text-slate-400">Casos</span>
                                         </div>
                                     </div>
                                 </div>
@@ -142,6 +142,8 @@ const Plazas = ({setPlaza, imagenes}) => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className={anonimato === 'Sí' && !numeroEmpleado.includes("") || !nombreEmpleado.includes("") ?'flex space-x-8 px-8 w-full': 'hidden'}>
                 <div className="relative max-w-md mx-auto md:max-w-2xl min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-xl mt-16">
                     <div className="px-6">
                         <div className="flex flex-wrap justify-center">
@@ -155,7 +157,7 @@ const Plazas = ({setPlaza, imagenes}) => {
                                     <div className="p-3 text-center">
                                         <div className="p-3 text-center">
                                             <span className="text-xl font-bold block uppercase tracking-wide text-slate-700">5,360</span>
-                                            <span className="text-sm text-slate-400">Guadalajara</span>
+                                            <span className="text-sm text-slate-400">Casos</span>
                                         </div>
                                     </div>
                                 </div>
@@ -177,8 +179,6 @@ const Plazas = ({setPlaza, imagenes}) => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className='flex space-x-8 px-8 w-full'>
                 <div className="relative max-w-md mx-auto md:max-w-2xl min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-xl mt-16">
                     <div className="px-6">
                         <div className="flex flex-wrap justify-center">
@@ -192,7 +192,7 @@ const Plazas = ({setPlaza, imagenes}) => {
                                     <div className="p-3 text-center">
                                         <div className="p-3 text-center">
                                             <span className="text-xl font-bold block uppercase tracking-wide text-slate-700">3,360</span>
-                                            <span className="text-sm text-slate-400">Puebla</span>
+                                            <span className="text-sm text-slate-400">Casos</span>
                                         </div>
                                     </div>
                                 </div>
@@ -226,7 +226,7 @@ const Plazas = ({setPlaza, imagenes}) => {
                                     <div className="p-3 text-center">
                                         <div className="p-3 text-center">
                                             <span className="text-xl font-bold block uppercase tracking-wide text-slate-700">2,360</span>
-                                            <span className="text-sm text-slate-400">Querétaro</span>
+                                            <span className="text-sm text-slate-400">Casos</span>
                                         </div>
                                     </div>
                                 </div>
@@ -247,6 +247,8 @@ const Plazas = ({setPlaza, imagenes}) => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className={anonimato === 'Sí' && !numeroEmpleado.includes("") || !nombreEmpleado.includes("") ?'flex space-x-8 px-8 w-full': 'hidden'}>
                 <div className="relative max-w-md mx-auto md:max-w-2xl min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-xl mt-16">
                     <div className="px-6">
                         <div className="flex flex-wrap justify-center">
@@ -260,7 +262,7 @@ const Plazas = ({setPlaza, imagenes}) => {
                                     <div className="p-3 text-center">
                                         <div className="p-3 text-center">
                                             <span className="text-xl font-bold block uppercase tracking-wide text-slate-700">1,360</span>
-                                            <span className="text-sm text-slate-400">Hermosillo</span>
+                                            <span className="text-sm text-slate-400">Casos</span>
                                         </div>
                                     </div>
                                 </div>
@@ -294,7 +296,7 @@ const Plazas = ({setPlaza, imagenes}) => {
                                     <div className="p-3 text-center">
                                         <div className="p-3 text-center">
                                             <span className="text-xl font-bold block uppercase tracking-wide text-slate-700">5,360</span>
-                                            <span className="text-sm text-slate-400">Tijuana</span>
+                                            <span className="text-sm text-slate-400">Casos</span>
                                         </div>
                                     </div>
                                 </div>
@@ -329,7 +331,7 @@ const Plazas = ({setPlaza, imagenes}) => {
                                     <div className="p-3 text-center">
                                         <div className="p-3 text-center">
                                             <span className="text-xl font-bold block uppercase tracking-wide text-slate-700">5,360</span>
-                                            <span className="text-sm text-slate-400">Mérida</span>
+                                            <span className="text-sm text-slate-400">Casos</span>
                                         </div>
                                     </div>
                                 </div>
