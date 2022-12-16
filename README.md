@@ -39,6 +39,7 @@
     <br>
     <br>
     <hr>
+    
     ###### Powered By: Miguel Ángel González López
     ###### Shared under free license, doesn't can reproduce or sell how a self creation
     ###### Every time than the software has cloned, emit a notification to creator
