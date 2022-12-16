@@ -7,8 +7,10 @@ const Accion = ({botones, setAccion, imagenes}) => {
     return (
         <>
             <div className={botones === 2 ? "hidden": ""}>
-                <h2 className="uppercase text-3xl py-8">Acción</h2>
 
+                <div className="text-center flex justify-center items-center align-middle py-4">
+                    <h2 className="uppercase text-3xl">Acción</h2>
+                </div>
                 <div className='flex space-x-8 px-8'>
                     <div className="relative max-w-md mx-auto md:max-w-2xl min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-xl mt-16">
                         <div className="px-6">

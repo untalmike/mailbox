@@ -85,9 +85,7 @@ const Formulario = ({motivo, setMotivo}) => {
                        
 
                     </div>
-                    <div className='flex justify-between px-8'>
-
-                    
+                    <div className='flex justify-between px-8 py-8'>
                         <div className='flex justify-start'>
                             <div className={botones === 0 ? "bg-gray-600 text-white font-bold rounded-full h-16 w-16 text-center flex items-center justify-center align-middle":'bg-teal-600 hover:bg-teal-500 text-white font-bold rounded-full h-16 w-16 text-center flex items-center justify-center align-middle animate-bounce'}>
                                 <button type="button" onClick={()=>{(botones <= 0)? setBotones(botones - 0): setBotones(botones - 1)}} disabled={(botones === 0)? true:false}>
