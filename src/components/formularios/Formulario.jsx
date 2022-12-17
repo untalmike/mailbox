@@ -11,6 +11,7 @@ import Personal from './preguntas/Personal'
 import Plazas from './preguntas/Plazas'
 import Experiences from './preguntas/Experiences'
 import Bienvenida from './Bienvenida'
+import Comentarios from './preguntas/Comentarios'
 
 const Formulario = ({motivo, setMotivo}) => {
     
@@ -26,26 +27,7 @@ const Formulario = ({motivo, setMotivo}) => {
     const [felicitacion, setFelicitacion] = useState('')
     const [comentarios, setComentarios] = useState('')
     const [botones, setBotones] = useState(0)
-
-    const back = document.querySelectorAll("#back")
-    const front = document.querySelector("#front")
     
-
-    const eventBack = (e, back) => {
-        e.preventDefault()
-        
-        if(botones === 0 || botones === undefined){
-            setBotones(botones - 0)
-            back.value.disabled(true)
-        } else {
-            setBotones(botones - 1)
-            back.value.disabled(false)
-
-        }
-
-    }
-    
-
     const imagenes = {
         claim,
         suggestion,
@@ -62,13 +44,11 @@ const Formulario = ({motivo, setMotivo}) => {
                     <div className='flex flex-col justify-center items-center'>
                         {botones === 0 ? (
                             <Bienvenida
-                                id="1" 
                                 botones={botones}
                             />
                         ) : (
                             <>
                                 <Accion
-                                    id="2" 
                                     accion={accion}
                                     setAccion={setAccion}
                                     botones={botones}
@@ -100,15 +80,17 @@ const Formulario = ({motivo, setMotivo}) => {
                                     botones={botones}
                                     imagenes={imagenes}
                                 />
+                                <Comentarios
+                                    setComentarios={setComentarios}
+                                />
                             </>
                         )}
-                       
 
                     </div>
                     <div className='flex justify-between px-8 py-8'>
                         <div className='flex justify-start'>
                             <div className={botones === 0 ? "bg-gray-600 text-white font-bold rounded-full h-16 w-16 text-center flex items-center justify-center align-middle":'bg-teal-600 hover:bg-teal-500 text-white font-bold rounded-full h-16 w-16 text-center flex items-center justify-center align-middle animate-bounce'}>
-                                <button id="back" type="button" onClick={eventBack}>
+                                <button type="button" onClick={() => botones === 0 ? setBotones(botones - 0) : setBotones(botones - 1)} disabled={botones === 0 ? true : false}>
                                     <svg className="w-8 h-8 font-extrabold bi bi-arrow-left" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                                         <path fillRule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
                                     </svg>
@@ -122,7 +104,7 @@ const Formulario = ({motivo, setMotivo}) => {
                         
                         <div className='flex justify-end'>
                             <div className={comentarios !== '' ? "bg-gray-600 text-white font-bold rounded-full h-16 w-16 text-center flex items-center justify-center align-middle" : 'bg-teal-600 hover:bg-teal-500 text-white font-bold rounded-full h-16 w-16 text-center flex items-center justify-center align-middle animate-bounce'}>
-                                <button id="front" type="button" onClick={()=> setBotones(botones + 1)}>
+                                <button id="front" type="button" onClick={()=> comentarios !== "" ? setBotones(botones + 0) : setBotones(botones + 1)} disabled={comentarios !== "" ? true : false}>
                                     <svg className="w-8 h-8 font-extrabold bi bi-arrow-right" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                                         <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
                                     </svg>
