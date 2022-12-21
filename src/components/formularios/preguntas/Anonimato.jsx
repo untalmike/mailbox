@@ -1,9 +1,9 @@
 
-const Anonimato = ({setAnonimato, imagenes, accion}) => {
+const Anonimato = ({botones, setAnonimato, imagenes, accion}) => {
     const {anonimo, persona}=imagenes
     return (
         <>
-            <div className={accion ? 'flex space-x-8 px-8' : 'hidden'}>
+            <div className={accion && botones === 2 ? 'flex space-x-8 px-8' : 'hidden'}>
                 <div className="relative max-w-md mx-auto md:max-w-2xl min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-xl mt-16">
                     <div className="px-6">
                         <div className="flex flex-wrap justify-center">

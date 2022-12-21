@@ -1,18 +1,17 @@
 
-const Accion = ({botones, accion, setAccion, imagenes}) => {
+const Accion = ({botones, setAccion, imagenes}) => {
 
     const {claim, suggestion, complain, clapping} = imagenes;
     
 
     return (
         <>
-            <div className={ botones === 2 ? "hidden": ""}>
-
+            <div className={botones !== 1 ? "hidden" : botones === 1 ? "" : "hidden"}>
                 <div className="text-center flex justify-center items-center align-middle py-4">
                     <h2 className="uppercase text-3xl">Acción</h2>
                 </div>
                 <div className='flex space-x-8 px-8'>
-                    <div className={accion === "Queja o Reclamo" ? "relative max-w-md mx-auto md:max-w-2xl min-w-0 break-words bg-teal-900 text-white w-full mb-6 shadow-lg rounded-xl mt-16" : "relative max-w-md mx-auto md:max-w-2xl min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-xl mt-16"}>
+                    <div className="relative max-w-md mx-auto md:max-w-2xl min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-xl mt-16">
                         <div className="px-6">
                             <div className="flex flex-wrap justify-center">
                                 <div className="w-full flex justify-center">

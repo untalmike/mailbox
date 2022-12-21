@@ -27,7 +27,7 @@ const Formulario = ({motivo, setMotivo}) => {
     const [felicitacion, setFelicitacion] = useState('')
     const [comentarios, setComentarios] = useState('')
     const [botones, setBotones] = useState(0)
-    
+    console.log(typeof(botones))
     const imagenes = {
         claim,
         suggestion,
@@ -50,14 +50,14 @@ const Formulario = ({motivo, setMotivo}) => {
                             <>
                                 <Accion
                                     accion={accion}
-                                    setAccion={setAccion}
                                     botones={botones}
+                                    setAccion={setAccion}
                                     imagenes={imagenes}
                                 />
                                 <Anonimato
                                     accion={accion}
-                                    setAnonimato={setAnonimato}
                                     botones={botones}
+                                    setAnonimato={setAnonimato}
                                     imagenes={imagenes}
                                 />
                                 <Personal
