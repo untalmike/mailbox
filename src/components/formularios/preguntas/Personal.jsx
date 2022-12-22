@@ -1,8 +1,8 @@
 
-const Personal = ({anonimato, setNombreEmpleado, setNumeroEmpleado}) => {
-    console.log(anonimato)
+const Personal = ({botones, anonimato, setNombreEmpleado, setNumeroEmpleado}) => {
+    //console.log(anonimato)
     return (
-        <div className={anonimato === 'Sí' ? "flex items-center border-b border-black py-4 my-8 space-x-8 w-full px-8" : "hidden"}>
+        <div className={anonimato === "No" && botones === 3 ? "flex space-x-8 px-8" : "hidden"}>
             <div className="relative z-0 mb-6 w-full group">
                 <input 
                     type="text" 
