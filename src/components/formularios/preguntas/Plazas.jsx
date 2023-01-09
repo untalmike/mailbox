@@ -3,8 +3,11 @@ const Plazas = ({botones, anonimato, nombreEmpleado, numeroEmpleado, setPlaza, i
 
     const {complain} = imagenes
     return (
-        <>
-            <div className={ anonimato === "Sí" && botones === 3 && nombreEmpleado === "" && numeroEmpleado === "" ? "" : anonimato === "No" && botones === 4 && numeroEmpleado !== "" && nombreEmpleado !== "" ? "" : "hidden"}>
+        <div className={anonimato === "Sí" && botones === 3 ? "" : anonimato === "No" && botones === 4 && numeroEmpleado !== "" && nombreEmpleado !== "" ? "" : "hidden"}>
+            <div className="text-center flex justify-center items-center align-middle py-12">
+                <h2 className="uppercase text-3xl">Plazas TYT</h2>
+            </div>
+            <div className="flex space-x-8 px-8">
                 <div className="flex space-x-8 px-8">
                     <div className="relative max-w-md mx-auto md:max-w-2xl min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-xl mt-16">
                         <div className="px-6">
@@ -144,7 +147,7 @@ const Plazas = ({botones, anonimato, nombreEmpleado, numeroEmpleado, setPlaza, i
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className="flex space-x-8 px-8">
                     <div className="relative max-w-md mx-auto md:max-w-2xl min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-xl mt-16">
                         <div className="px-6">
                             <div className="flex flex-wrap justify-center">
@@ -249,7 +252,7 @@ const Plazas = ({botones, anonimato, nombreEmpleado, numeroEmpleado, setPlaza, i
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className="flex space-x-8 px-8">
                     <div className="relative max-w-md mx-auto md:max-w-2xl min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-xl mt-16">
                         <div className="px-6">
                             <div className="flex flex-wrap justify-center">
@@ -357,7 +360,7 @@ const Plazas = ({botones, anonimato, nombreEmpleado, numeroEmpleado, setPlaza, i
                 </div>
             </div>
             
-        </>
+        </div>
     )
 }
 

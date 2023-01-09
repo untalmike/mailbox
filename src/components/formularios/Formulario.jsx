@@ -76,6 +76,7 @@ const Formulario = ({motivo, setMotivo}) => {
                                     imagenes={imagenes}
                                 />
                                 <Experiences
+                                    anonimato={anonimato}
                                     plaza={plaza}
                                     setExperience={setExperience}
                                     botones={botones}
