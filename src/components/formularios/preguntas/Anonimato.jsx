@@ -1,5 +1,6 @@
 
-const Anonimato = ({botones, setAnonimato, imagenes, accion}) => {
+const Anonimato = ({botones, respond_form, setRespond_form, imagenes}) => {
+    const { accion } = respond_form
     const {anonimo, persona}=imagenes
     return (
         <div className={accion !== "" && botones === 2 ? "" : "hidden"}>
@@ -28,7 +29,7 @@ const Anonimato = ({botones, setAnonimato, imagenes, accion}) => {
                         </div>
                         <div className='flex w-full items-center justify-center'>
                             <div className='justify-center text-base mt-0 mb-2 text-slate-600 hover:text-slate-900 font-bold uppercase items-center text-center border-2 border-gray-200 py-4 rounded-xl w-4/6 hover:bg-gray-400'>
-                                <input type="radio" className="text-center text-2xl w-6 h-6 : text-white" value="Sí" onChange={e => setAnonimato(e.target.value)} name="anonimato"/>
+                                <input type="radio" className="text-center text-2xl w-6 h-6 : text-white" value="Si" onChange={(event) => setRespond_form({...respond_form, [event.target.name] : event.target.value})} name="anonimato"/>
                                 <hr className='my-2'/>
                                 <h3>Si</h3>
                             </div>
@@ -64,7 +65,7 @@ const Anonimato = ({botones, setAnonimato, imagenes, accion}) => {
                         </div>
                         <div className='flex w-full items-center justify-center'>
                             <div className='justify-center text-base mt-0 mb-2 text-slate-600 hover:text-slate-900 font-bold uppercase items-center text-center border-2 border-gray-200 py-4 rounded-xl w-4/6 hover:bg-gray-400'>
-                                <input type="radio" className="text-center text-2xl w-6 h-6" value="No" onChange={e => setAnonimato(e.target.value)} name="anonimato"/>
+                                <input type="radio" className="text-center text-2xl w-6 h-6" value="No" onChange={(event) => setRespond_form({...respond_form, [event.target.name] : event.target.value})} name="anonimato"/>
                                 <hr className='my-2'/>
                                 <h3>No</h3>
                             </div>

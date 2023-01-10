@@ -32,7 +32,8 @@
     ```
 
     - if do you want use "yarn" could made a project with your specifications and implement the code included here, is portable
-
+    - I add a connection example located on /src/server/helpers/poo-example, and rename for poo.php
+    - You need change the file named utils.jsx, and charge your database on your local service, the file is named template_quejas.sql
 
     <br>
     <br>

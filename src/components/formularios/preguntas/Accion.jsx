@@ -1,8 +1,8 @@
 
-const Accion = ({botones, setAccion, imagenes}) => {
+const Accion = ({botones, respond_form, setRespond_form, imagenes}) => {
 
+    // Destructuring for all images, extract just the images that we need
     const {claim, suggestion, complain, clapping} = imagenes;
-    
 
     return (
         <>
@@ -32,7 +32,7 @@ const Accion = ({botones, setAccion, imagenes}) => {
                             </div>
                             <div className='flex w-full items-center justify-center'>
                                 <div className='justify-center text-base mt-0 mb-2 text-slate-600 hover:text-slate-900 font-bold uppercase items-center text-center border-2 border-gray-200 py-4 rounded-xl w-4/6 hover:bg-gray-400'>
-                                    <input type="radio" className="text-center text-2xl w-6 h-6 : text-white" value="Queja o Reclamo" onChange={e => setAccion(e.target.value)} name="accion"/>
+                                    <input type="radio" className="text-center text-2xl w-6 h-6 : text-white" value="Queja o Reclamo" onChange={(event) => setRespond_form({...respond_form, [event.target.name] : event.target.value})} name="accion"/>
                                     <hr className='my-2'/>
                                     <h3>Queja o Reclamo</h3>
                                 </div>
@@ -68,7 +68,7 @@ const Accion = ({botones, setAccion, imagenes}) => {
                             </div>
                             <div className='flex w-full items-center justify-center'>
                                 <div className='justify-center text-base mt-0 mb-2 text-slate-600 hover:text-slate-900 font-bold uppercase items-center text-center border-2 border-gray-200 py-4 rounded-xl w-4/6 hover:bg-gray-400'>
-                                    <input type="radio" className="text-center text-2xl w-6 h-6" value="Sugerencia" onChange={e => setAccion(e.target.value)} name="accion"/>
+                                    <input type="radio" className="text-center text-2xl w-6 h-6" value="Sugerencia" onChange={(event) => setRespond_form({...respond_form, [event.target.name] : event.target.value})} name="accion"/>
                                     <hr className='my-2'/>
                                     <h3>Sugerencia</h3>
                                 </div>
@@ -104,7 +104,7 @@ const Accion = ({botones, setAccion, imagenes}) => {
                             </div>
                             <div className='flex w-full items-center justify-center'>
                                 <div className='justify-center text-base mt-0 mb-2 text-slate-600 hover:text-slate-900 font-bold uppercase items-center text-center border-2 border-gray-200 py-4 rounded-xl w-4/6 hover:bg-gray-400'>
-                                    <input type="radio" className="text-center text-2xl w-6 h-6" value="Denuncia" onChange={e => setAccion(e.target.value)} name="accion"/>
+                                    <input type="radio" className="text-center text-2xl w-6 h-6" value="Denuncia" onChange={(event) => setRespond_form({...respond_form, [event.target.name] : event.target.value})} name="accion"/>
                                     <hr className='my-2'/>
                                     <h3>Denuncia</h3>
                                 </div>
@@ -140,7 +140,7 @@ const Accion = ({botones, setAccion, imagenes}) => {
                             </div>
                             <div className='flex w-full items-center justify-center'>
                                 <div className='justify-center text-base mt-0 mb-2 text-slate-600 hover:text-slate-900 font-bold uppercase items-center text-center border-2 border-gray-200 py-4 rounded-xl w-4/6 hover:bg-gray-400'>
-                                    <input type="radio" className="text-center text-2xl w-6 h-6" value="Felicitación" onChange={e => setAccion(e.target.value)} name="accion"/>
+                                    <input type="radio" className="text-center text-2xl w-6 h-6" value="Felicitacion" onChange={(event) => setRespond_form({...respond_form, [event.target.name] : event.target.value})} name="accion"/>
                                     <hr className='my-2'/>
                                     <h3>Felicitación</h3>
                                 </div>

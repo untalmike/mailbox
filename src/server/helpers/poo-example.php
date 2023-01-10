@@ -6,33 +6,11 @@ header("Allow: GET, POST, OPTIONS, PUT, DELETE");
 ini_set("display_errors", "1");
 
 class funciones_php {
-    public $BD_Server = "localhost";
-    public $BD_Usuario = "root";
-    public $BD_Password = "secret";
-    public $BD_BD = "buzon_quejas"; 
-    public $BD_Puerto = 33060;
-    
-    /* LOCAL */
-    /* public $BD_Server = "127.0.0.1";
-    public $BD_Usuario = "root";
+    public $BD_Server = "";
+    public $BD_Usuario = "";
     public $BD_Password = "";
-    public $BD_BD = "satisfaccion_clientes";  */
-    
-    
-    /***
-     * PRODUCCION
-    public $BD_Server = "localhost";
-    public $BD_Usuario = "root";
-    public $BD_Password = "V88Tig1*2020";
-    public $BD_BD = "encuesta_clima_laboral"; 
-    public $BD_Puerto = 3306;
-    **/
-/* 
-    public $BD_Server = "localhost";
-    public $BD_Usuario = "root";
-    public $BD_Password = "V88Tig1*2020";
-    public $BD_BD = "encuesta_clima_laboral"; 
-    //public $BD_Puerto = 3306; */
+    public $BD_BD = ""; 
+    //public $BD_Puerto = ;
     
     public function Conexion_BD(){
         try{
