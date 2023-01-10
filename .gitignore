@@ -23,7 +23,3 @@ dist-ssr
 *.sln
 *.sw?
 
-#file
-help_data.js
-poo.php
-utils.js
