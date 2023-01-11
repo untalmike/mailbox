@@ -3,14 +3,15 @@ header('Access-Control-Allow-Origin: *');
 header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
 header("Allow: GET, POST, OPTIONS, PUT, DELETE");
-ini_set("display_errors", "1");
+// Call all error presents in the run application
+// ini_set("display_errors", "1");
 
 class funciones_php {
     public $BD_Server = "localhost";
     public $BD_Usuario = "root";
-    public $BD_Password = "secret";
+    public $BD_Password = "";
     public $BD_BD = "buzon_quejas"; 
-    public $BD_Puerto = 33060;
+    //public $BD_Puerto = 33060;
     
     /* LOCAL */
     /* public $BD_Server = "127.0.0.1";
@@ -36,7 +37,7 @@ class funciones_php {
     
     public function Conexion_BD(){
         try{
-            $conexion = new mysqli($this->BD_Server, $this->$BD_Puerto, $this->BD_Usuario, $this->BD_Password, $this->BD_BD);
+            $conexion = new mysqli($this->BD_Server, $this->BD_Usuario, $this->BD_Password, $this->BD_BD);
             $conexion->set_charset("utf8mb4");
             if ($conexion->connect_errno) 
                 return false;

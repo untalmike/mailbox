@@ -17,6 +17,7 @@ import Queja from './especificaciones/Queja'
 import Sugerencia from './especificaciones/Sugerencia'
 import Felicitacion from './especificaciones/Felicitacion'
 import Swal from 'sweetalert2'
+import { consulta_Fetch } from '../../utils'
 
 const Formulario = () => {
 
@@ -24,8 +25,9 @@ const Formulario = () => {
         accion:'', anonimato:'', numeroEmpleado:'', nombreEmpleado:'', plaza:'', experience:'',
         queja:'', sugerencia:'', fechaDenuncia:'', horaDenuncia:'',lugarDenuncia:'', 
         descripcionDenuncia:'', personaFelicitacion:'', porqueFelicitacion:'', reconocimientoFelicitacion:'',
-        comentarios:'', folio:''
+        comentario:'', folio:''
     })
+    console.log(respond_form)
     const {accion, experience} = respond_form
 
     const DATOS_ACCION = {
@@ -45,6 +47,7 @@ const Formulario = () => {
 
 
     const [botones, setBotones] = useState(0)
+    console.log(botones)
     const [error, setError] = useState(false)
     
     const imagenes = {
@@ -164,11 +167,8 @@ const Formulario = () => {
 
         try{
             const data = await consulta_Fetch(`app_mysql_insert.php`, {
-                from: 'satisfaccion_clientes',
-                insert_values: ` null, '${respond_form.accion}', '${respond_form.anonimato}', '${respond_form.numeroEmpleado}', '${respond_form.nombreEmpleado}', '${respond_form.plaza}',
-                '${respond_form.experience}', '${respond_form.queja}', '${respond_form.sugerencia}', '${respond_form.fechaDenuncia}', '${respond_form.horaDenuncia}',
-                '${respond_form.lugarDenuncia}', '${respond_form.descripcionDenuncia}', '${respond_form.personaFelicitacion}', '${respond_form.porqueFelicitacion}', '${respond_form.reconocimientoFelicitacion}',
-                '${respond_form.comentarios}', '${folio}', NOW()`
+                from: 'quejas',
+                insert_values: ` null, '${respond_form.accion}', '${respond_form.anonimato}', '${respond_form.numeroEmpleado}', '${respond_form.nombreEmpleado}', '${respond_form.plaza}', '${respond_form.experience}', '${respond_form.queja}', '${respond_form.sugerencia}', '${respond_form.fechaDenuncia}', '${respond_form.horaDenuncia}', '${respond_form.lugarDenuncia}', '${respond_form.descripcionDenuncia}', '${respond_form.personaFelicitacion}', '${respond_form.porqueFelicitacion}', '${respond_form.reconocimientoFelicitacion}', '${respond_form.comentario}', '${folio}', NOW()`
             });
         
             if(data.estatus && data.return.estatus.length > 0 && data.return.estatus.indexOf('Error:') === -1){

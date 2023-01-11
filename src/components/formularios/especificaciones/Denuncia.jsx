@@ -2,7 +2,7 @@
 const Denuncia = ({respond_form, setRespond_form, botones}) => {
     const {accion, anonimato} = respond_form
     return ( 
-        <div className={(accion === "Denuncia" && anonimato === "Sí" && botones === 5) || (accion === "Denuncia" && anonimato === "No" && botones === 6) ? "" : "hidden"}>
+        <div className={(accion === "Denuncia" && anonimato === "Si" && botones === 5) || (accion === "Denuncia" && anonimato === "No" && botones === 6) ? "" : "hidden"}>
             <div className="text-center flex justify-center items-center align-middle py-12">
                 <h2 className="uppercase text-3xl">Denuncia</h2>
             </div>

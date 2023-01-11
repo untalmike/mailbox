@@ -9,7 +9,7 @@ CREATE TABLE quejas (
     anonimato ENUM("Sí", "No") NOT NULL,
     nombreEmpleado VARCHAR(150) NULL,
     numeroEmpleado VARCHAR(10) NULL,
-    plaza ENUM("Monterrey Obispado","Monterrey 5 de Mayo","Monterrey Tapia","Monterrey Arteaga","Guadalajara","Puebla","Querétaro","Hermosillo","Tijuana","Mérida") NOT NULL,
+    plaza ENUM("Monterrey Obispado","Monterrey 5 de Mayo","Monterrey Tapia","Monterrey Arteaga","Guadalajara","Puebla","Queretaro","Hermosillo","Tijuana","Merida") NOT NULL,
     experience ENUM("Gonzalo Garza", "Leyda Blanco"),
     queja VARCHAR(1200) NULL,
     sugerencia VARCHAR(1200) NULL,

@@ -8,7 +8,7 @@ const Plazas = ({botones, respond_form, setRespond_form, imagenes}) => {
     const { anonimato, numeroEmpleado, nombreEmpleado } = respond_form
 
     // There is an array, have all places inside and limit the use to grids or cards, we need just one and using a map, order all places
-    const array_plazas = [ "Monterrey Obispado", "Monterrey 5 de Mayo", "Monterrey Tápia", "Monterrey Arteaga", "Guadalajara", "Puebla", "Querétaro", "Hermosillo", "Tijuana", "Mérida" ];
+    const array_plazas = [ "Monterrey Obispado", "Monterrey 5 de Mayo", "Monterrey Tapia", "Monterrey Arteaga", "Guadalajara", "Puebla", "Queretaro", "Hermosillo", "Tijuana", "Merida" ];
 
     return (
         <div className={anonimato === "Si" && botones === 3 ? "" : anonimato === "No" && botones === 4 && numeroEmpleado !== "" && nombreEmpleado !== "" ? "" : "hidden"}>
