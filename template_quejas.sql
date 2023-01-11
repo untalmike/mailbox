@@ -15,6 +15,7 @@ CREATE TABLE quejas (
     sugerencia VARCHAR(1200) NULL,
     fechaDenuncia VARCHAR(10) NULL,
     horaDenuncia VARCHAR(10) NULL,
+    lugarDenuncia VARCHAR(10) NULL,
     descripcionDenuncia VARCHAR(250) NULL,
     personaFelicitacion VARCHAR(500) NULL,
     porqueFelicitacion VARCHAR(500) NULL,
