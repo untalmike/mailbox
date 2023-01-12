@@ -16,12 +16,12 @@ const Experiences = ({respond_form, setRespond_form, botones, imagenes}) => {
             </div>
             <div className="grid grid-cols-3 space-x-8 px-8 w-full">
                 { array_experience.map((experience, i) => (
-                <div className="relative max-w-md mx-auto md:max-w-2xl min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-xl mt-16" key={i}>
+                <div className="relative max-w-md mx-auto md:max-w-2xl min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-xl mt-16 dark:bg-gray-900 dark:border-2" key={i}>
                     <div className="px-6">
                         <div className="flex flex-wrap justify-center">
                             <div className="w-full flex justify-center">
                                 <div className="relative">
-                                    <img src={complain} className="shadow-xl rounded-full align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]"/>
+                                    <img src={complain} className="shadow-xl dark:bg-white rounded-full align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]"/>
                                 </div>
                             </div>
                             <div className="w-full text-center mt-20">
@@ -36,7 +36,7 @@ const Experiences = ({respond_form, setRespond_form, botones, imagenes}) => {
                             </div>
                         </div>
                         <div className='flex w-full items-center justify-center'>
-                            <div className='justify-center text-base mt-0 mb-2 text-slate-600 hover:text-slate-900 font-bold uppercase items-center text-center border-2 border-gray-200 py-4 rounded-xl w-4/6 hover:bg-gray-400'>
+                            <div className='justify-center text-base mt-0 mb-2 text-slate-600 hover:text-slate-900 dark:hover:bg-white font-bold uppercase items-center text-center border-2 border-gray-200 py-4 rounded-xl w-4/6 hover:bg-gray-400'>
                                 <input type="radio" className="text-center text-2xl w-6 h-6 : text-white" value={experience} onChange={(event) => setRespond_form({...respond_form, [event.target.name] : event.target.value})} name="experience"/>
                                 <hr className='my-2'/>
                                 <h3>{experience}</h3>

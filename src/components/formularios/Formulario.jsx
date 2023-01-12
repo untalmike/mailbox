@@ -28,6 +28,7 @@ const Formulario = () => {
         descripcionDenuncia:'', personaFelicitacion:'', porqueFelicitacion:'', reconocimientoFelicitacion:'',
         comentario:'', folio:''
     })
+    const [botones, setBotones] = useState(0)
 
     const {accion, experience} = respond_form
 
@@ -43,41 +44,7 @@ const Formulario = () => {
         "Leyda Blanco": 2
     }
 
-    async function validarId() {
-        var valorVacio=undefined
-        try {
-            let idExtract, idMaximo = []
-
-            idExtract = await consulta_Fetch(`app_mysql_libre.php`, {
-                query: `SELECT MAX(id) FROM quejas`
-            })
-            if(idExtract.return.data.length > 0){
-                idMaximo.push(idExtract.return.data[0]["MAX(id)"])
-            }
-                valorVacio = idMaximo
-                //console.log(valorVacio)
-            
-        } catch (error) {
-            Swal.fire({
-                title: 'Error!',
-                text: 'Falla en la conexión',
-                icon: 'error', 
-                showConfirmButton:false
-            })
-        }
-        return valorVacio
-        //console.log(valorVacio)
-    }
-
-    ;(async () => {
-        const valores = await validarId()
-        const x = valores[0]
-    })()
-    
-
     const folio = DATOS_ACCION[accion]+""+EXPERIENCE_ASIGNADO[experience]
-
-    const [botones, setBotones] = useState(0)
     
     const imagenes = {
         claim,
@@ -90,7 +57,7 @@ const Formulario = () => {
     
     return (
         
-        <div className="md:w-full text-gray-600 font-bold flex justify-center items-center py-4 flex-col bg-white">                
+        <div className="md:w-full text-gray-600 font-bold flex justify-center items-center py-4 flex-col bg-white dark:bg-gray-900">                
             <form onSubmit={SendQuiz}>
                 <div className='flex flex-col justify-center items-center'>
                     {botones === 0 ? (
