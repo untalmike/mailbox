@@ -1,5 +1,4 @@
 
-
 const Bienvenida = ({botones}) => {
     return (
         <div className={botones === 1 ? "hidden": ""}>

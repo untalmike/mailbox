@@ -19,32 +19,30 @@ import Felicitacion from './especificaciones/Felicitacion'
 import Botones from '../Botones'
 import Swal from 'sweetalert2'
 import { consulta_Fetch } from '../../utils'
+import GetDataPlace  from '../../server/helpers/help_data.jsx';
 
 const Formulario = () => {
-
+    
+    // State de los datos del formulario
     const [respond_form, setRespond_form] = useState({
         accion:'', anonimato:'', numeroEmpleado:'', nombreEmpleado:'', plaza:'', experience:'',
         queja:'', sugerencia:'', fechaDenuncia:'', horaDenuncia:'',lugarDenuncia:'', 
         descripcionDenuncia:'', personaFelicitacion:'', porqueFelicitacion:'', reconocimientoFelicitacion:'',
         comentario:'', folio:''
     })
-    const [botones, setBotones] = useState(0)
-
+    
+    // Destructuring de los datos de formulario
     const {accion, experience} = respond_form
 
-    const DATOS_ACCION = {
-        "Queja o Reclamo":1,
-        "Sugerencia":2,
-        "Denuncia":3,
-        "Felicitacion":4
-    }
+    // State de los botones para conocer el número marcado
+    const [botones, setBotones] = useState(0)
 
-    const EXPERIENCE_ASIGNADO = {
-        "Gonzalo Garza": 1,
-        "Leyda Blanco": 2
-    }
+    let folio = 0;
 
-    const folio = DATOS_ACCION[accion]+""+EXPERIENCE_ASIGNADO[experience]
+    const DATOS_ACCION = { "Queja o Reclamo":1, "Sugerencia":2, "Denuncia":3, "Felicitacion":4 }
+    const EXPERIENCE_ASIGNADO = { "Gonzalo Garza": 1, "Leyda Blanco": 2 } 
+
+    folio = DATOS_ACCION[accion]+""+EXPERIENCE_ASIGNADO[experience]
     
     const imagenes = {
         claim,

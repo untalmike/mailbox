@@ -2,7 +2,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faSun, faMoon } from '@fortawesome/free-regular-svg-icons'
 
 const Header = ({isChecked, setIsChecked}) => {
-    //console.log(isChecked)
+
     return (
         <div className='flex'>
             <h1 className="block text-gray-900 font-black text-5xl text-center md:w-2/3 mx-auto uppercase dark:text-white">buzón de quejas y sugerencias</h1>

@@ -1,7 +1,7 @@
 
 const Botones = ({botones, setBotones, respond_form}) => {
      const { comentario, accion } = respond_form
-     console.log(accion)
+
     return (
         <div className='flex justify-between px-8 py-8'>
             <div className='flex justify-start'>
