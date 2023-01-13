@@ -45,7 +45,7 @@ const Botones = ({botones, setBotones, respond_form}) => {
                         (botones === 6 && accion === "Sugerencia" && sugerencia === "") || 
                         (botones === 6 && accion === "Denuncia" && (fechaDenuncia === "" || horaDenuncia === "" || lugarDenuncia === "" || descripcionDenuncia === "")) || 
                         (botones === 6 && accion === "Felicitacion" && (personaFelicitacion === "" || porqueFelicitacion === "" || reconocimientoFelicitacion === "")) || 
-                        (comentario !== "")
+                        (botones === 6 || botones === 7)
                 
                 ? "bg-gray-600 text-white font-bold rounded-full h-16 w-16 text-center flex items-center justify-center align-middle" : 'bg-teal-700 hover:bg-teal-600 text-white font-bold rounded-full h-16 w-16 text-center flex items-center justify-center align-middle animate-bounce'}>
                     <button 
@@ -68,7 +68,7 @@ const Botones = ({botones, setBotones, respond_form}) => {
                             (botones === 6 && accion === "Sugerencia" && sugerencia === "") || 
                             (botones === 6 && accion === "Denuncia" && (fechaDenuncia === "" || horaDenuncia === "" || lugarDenuncia === "" || descripcionDenuncia === "")) || 
                             (botones === 6 && accion === "Felicitacion" && (personaFelicitacion === "" || porqueFelicitacion === "" || reconocimientoFelicitacion === "")) || 
-                            (comentario !== "") ? true : false}
+                            (botones === 6 || botones === 7) ? true : false}
                         >
                         <svg className="w-8 h-8 font-extrabold bi bi-arrow-right" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                             <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
