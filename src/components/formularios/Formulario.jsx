@@ -47,6 +47,10 @@ const Formulario = () => {
             EXPERIENCE_ASIGNADO[experience] = 0
         }
 
+        if(isNaN(parseInt(datos[0]["Id"]))){
+            datos[0]["Id"]=0
+        }
+
         folio = DATOS_ACCION[accion]+""+EXPERIENCE_ASIGNADO[experience]+""+(parseInt(datos[0]["Id"])+1)
 
         if(folio.length <= 4){
