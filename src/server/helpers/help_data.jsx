@@ -13,13 +13,10 @@ export default async function GetDataPlace(){
                 data_query_arr.push(data_query.return.data[0])
             }
 
-        if(Object.entries(data_query_arr).length > 0){
-            const identificador = data_query_arr.filter(function(data_query_arr){ return data_query_arr })
-            const data_query_array = {
-                identificador: identificador,
+            if(Object.entries(data_query_arr).length > 0){
+                const identificador = data_query_arr.filter(function(data_query_arr){ return data_query_arr })
+                return_v = identificador
             }
-            return_v = data_query_array
-        }
 
     }catch(e){
         console.error(e)

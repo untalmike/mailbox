@@ -4,8 +4,8 @@ const Experiences = ({respond_form, setRespond_form, botones, imagenes}) => {
     const { anonimato, plaza } = respond_form
 
     // There is an pair array's, have all places inside and limit the use to grids or cards, we need just one and using a map, order all places
-    const array_experience = [ "Gonzalo Garza", "Leyda Blanco" ];
-    const plaza_experience = { "Gonzalo Garza":"Coordinador nacional de TYT Experience", "Leyda Blanco": "Experience Tijuana" }
+    const array_experience = [ "Gonzalo Garza", "Dulce Robles" ];
+    const plaza_experience = { "Gonzalo Garza":"Coordinador de TYT Experience", "Dulce Robles":"Experience Querétaro" }
 
     const {complain} = imagenes
 

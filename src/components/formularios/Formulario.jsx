@@ -30,20 +30,37 @@ const Formulario = () => {
         descripcionDenuncia:'', personaFelicitacion:'', porqueFelicitacion:'', reconocimientoFelicitacion:'',
         comentario:'', folio:''
     })
-    
+
     // Destructuring de los datos de formulario
     const {accion, experience} = respond_form
+
+    let folio = 0;
+    GetDataPlace().then(datos=>{
+        //console.log(datos[0]["Id"])
+        
+        // Esto sirve para crear el folio
+        const DATOS_ACCION = { "Queja o Reclamo":1, "Sugerencia":2, "Denuncia":3, "Felicitacion":4 }
+        const EXPERIENCE_ASIGNADO = { "Gonzalo Garza": 1, "Leyda Blanco": 2 } 
+
+        if(DATOS_ACCION[accion] === undefined || EXPERIENCE_ASIGNADO[experience] === undefined){
+            DATOS_ACCION[accion] = 0
+            EXPERIENCE_ASIGNADO[experience] = 0
+        }
+
+        folio = DATOS_ACCION[accion]+""+EXPERIENCE_ASIGNADO[experience]+""+(parseInt(datos[0]["Id"])+1)
+
+        if(folio.length <= 4){
+            folio ="0000"+folio
+        }else {
+            folio ="000"+folio
+        }
+
+        return folio
+    })
 
     // State de los botones para conocer el número marcado
     const [botones, setBotones] = useState(0)
 
-    let folio = 0;
-
-    const DATOS_ACCION = { "Queja o Reclamo":1, "Sugerencia":2, "Denuncia":3, "Felicitacion":4 }
-    const EXPERIENCE_ASIGNADO = { "Gonzalo Garza": 1, "Leyda Blanco": 2 } 
-
-    folio = DATOS_ACCION[accion]+""+EXPERIENCE_ASIGNADO[experience]
-    
     const imagenes = {
         claim,
         suggestion,

@@ -1,6 +1,6 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faChessKing } from '@fortawesome/free-regular-svg-icons'
-import { fa5, faTrainSubway, faBullseye, faChurch, faDemocrat, faHotdog, faUmbrellaBeach, faGuitar, faBell, faBurger} from '@fortawesome/free-solid-svg-icons'
+import { fa5, faTrainSubway, faBullseye, faChurch, faDemocrat, faHotdog, faUmbrellaBeach, faGuitar, faBell} from '@fortawesome/free-solid-svg-icons'
 
 const Plazas = ({botones, respond_form, setRespond_form, imagenes}) => {
 
