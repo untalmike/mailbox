@@ -45,9 +45,13 @@ const Botones = ({botones, setBotones, respond_form}) => {
                         (botones === 6 && accion === "Sugerencia" && sugerencia === "") || 
                         (botones === 6 && accion === "Denuncia" && (fechaDenuncia === "" || horaDenuncia === "" || lugarDenuncia === "" || descripcionDenuncia === "")) || 
                         (botones === 6 && accion === "Felicitacion" && (personaFelicitacion === "" || porqueFelicitacion === "" || reconocimientoFelicitacion === "")) || 
-                        (botones === 6 || botones === 7)
-                
-                ? "bg-gray-600 text-white font-bold rounded-full h-16 w-16 text-center flex items-center justify-center align-middle" : 'bg-teal-700 hover:bg-teal-600 text-white font-bold rounded-full h-16 w-16 text-center flex items-center justify-center align-middle animate-bounce'}>
+                        (botones === 6 || botones === 7) 
+                            ? 
+                        "bg-gray-600 text-white font-bold rounded-full h-16 w-16 text-center flex items-center justify-center align-middle" 
+                            : 
+                        "bg-teal-700 hover:bg-teal-600 text-white font-bold rounded-full h-16 w-16 text-center flex items-center justify-center align-middle animate-bounce"
+                    }
+                >
                     <button 
                         id="front" 
                         type="button" 
