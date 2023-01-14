@@ -38,9 +38,10 @@
     - El flujo respeta el siguiente proceso:
     ```mermaid
         graph TD;
+            ordersDb[(ordersDb)]
             A-->;
             B-->;
-            C-->;
+            C-->;cd C:
             D-->;
 
     ```
