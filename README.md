@@ -39,10 +39,11 @@
 
     ```mermaid
         graph TD;
+            buzonQuejas[(buzon_quejas)]
             id1([Ingreso al buzón de quejas])-->B;
             B[Bienvenida]-->C;
-            C[(buzon_quejas)]-->D;
-            D-->D;
+            C{Efectuar}-->|No|D;
+            D(Proceso sin acción);
     ```
     <br>
     <br>
