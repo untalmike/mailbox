@@ -32,10 +32,13 @@
     ```
 
     - if do you want use "yarn" could made a project with your specifications and implement the code included here, is portable
-    - I add a connection example located on /src/server/helpers/poo-example, and rename for poo.php
-    - You need change the file named utils.jsx, and charge your database on your local service, the file is named template_quejas.sql
+    - I add a connection example located on /src/server/helpers/poo_example, and rename for poo.php
+        - You can question to IT support, whats is the IP's and passwords
+        - when you finish and deploy the project you need this data
+    - You need change the file named utils_example.jsx, and charge your database at the local service, the file is named template_quejas.sql
+        - Just need change the reference into localhost for your IP and your port included at the application
 
-    - El flujo respeta el siguiente proceso:
+    - It flowchart allow seen how run away this application, maybe I need be better my capabilities over how make these, I will fix this at the future:
 
     ```mermaid
         graph TD;
@@ -67,6 +70,7 @@
             notificacion[Notificación correctas e id correcto]
             aviso{Cerrar aviso}
             error([No se registra proceso])
+
             inicio-->bienvenida;
             bienvenida-->buzonQuejas;
             bienvenida-->efectuar;
