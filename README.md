@@ -68,7 +68,7 @@
             sugerencia-->anonimato;
             anonimato-->|No|nombreUsuario;
             anonimato-->|No|numeroUsuario;
-            anonimato-->|Sí|plaza;
+            anonimato-->|Sí|plazas;
             nombreUsuario-->datos;
             numeroUsuario-->datos;
             datos-->plazas;
