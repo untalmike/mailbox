@@ -66,9 +66,6 @@
             queja-->anonimato;
             felicitacion-->anonimato;
             sugerencia-->anonimato;
-            anonimato-->|No|nombreUsuario;
-            anonimato-->|No|numeroUsuario;
-            anonimato-->|Sí|plazas;
     ```
 
     <br>
