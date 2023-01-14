@@ -41,7 +41,7 @@
         graph TD;
             id1([Ingreso al buzón de quejas])-->B;
             B[Bienvenida]-->C;
-            C-->D;
+            C([buzon_quejas])-->D;
             D-->D;
     ```
     <br>
