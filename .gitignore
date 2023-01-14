@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+poo.php
 
 # Editor directories and files
 .vscode/*
@@ -25,5 +26,4 @@ dist-ssr
 
 # files not allowed
 utils.jsx
-poo.php
 Flujo_buzon.pdf
