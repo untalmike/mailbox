@@ -42,8 +42,11 @@
             buzonQuejas[(buzon_quejas)]
             id1([Ingreso al buzón de quejas])-->B;
             B[Bienvenida]-->C;
-            C{Efectuar}-->|No|D;
+                flowchart RL
+                C{Efectuar}-->|No|D;
+            C{Efectuar}-->|Sí|E;
             D(Proceso sin acción);
+            E
     ```
     <br>
     <br>
