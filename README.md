@@ -105,7 +105,6 @@
             notificacion-->|No|aviso;
             aviso-->cierre;
             aviso-->error;
-            error-->bienvenida;
     ```
     <br>
     <br>
