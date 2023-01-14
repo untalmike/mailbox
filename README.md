@@ -69,8 +69,6 @@
             anonimato-->|No|nombreUsuario;
             anonimato-->|No|numeroUsuario;
             anonimato-->|Sí|plazas;
-            nombreUsuario-->datos;
-            numeroUsuario-->datos;
     ```
 
     <br>
