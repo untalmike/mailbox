@@ -39,9 +39,8 @@
 
     ```mermaid
         graph TD;
-            ordersDb[(ordersDb)]
-            A-->B;
-            B-->C;
+            id1([Ingreso al buzón de quejas])-->B;
+            B[Bienvenida]-->C;
             C-->D;
             D-->D;
     ```
