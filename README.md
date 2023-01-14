@@ -42,12 +42,13 @@
             buzonQuejas[(buzon_quejas)]
             id1([Ingreso al buzón de quejas])-->B;
             B[Bienvenida]-->C;
-            C{Efectuar}-->|No|D & C{Efectuar}-->|Sí|E;
+            C{Efectuar}-->|No|D;
+            C{Efectuar}-->|Sí|E & C{Efectuar}-->|Sí|F & C{Efectuar}-->|Sí|G & C{Efectuar}-->|Sí|H;
             D(Proceso sin acción);
             E[Denuncia];
-            E[Sugerencia];
-            E[Queja];
-            E[Felicitación];
+            F[Sugerencia];
+            G[Queja];
+            H[Felicitación];
     ```
     <br>
     <br>
