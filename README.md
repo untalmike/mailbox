@@ -100,11 +100,12 @@
             comentario-->registrar;
             registrar-->buzonQuejas;
             buzonQuejas-->id;
+            id-->notificacion;
             buzonQuejas-->notificacion;
             notificacion-->|Sí|aviso;
-            notificacion-->|No|aviso;
+            notificacion-->|No|error;
             aviso-->cierre;
-            aviso-->error;
+            error-->aviso;
     ```
     <br>
     <br>
