@@ -38,7 +38,7 @@
     - El flujo respeta el siguiente proceso:
 
     ```mermaid
-        graph LR;
+        graph TD;
             buzonQuejas[(buzon_quejas)]
             inicio([Ingreso al buzón de quejas])
             bienvenida[Bienvenida]
@@ -104,7 +104,7 @@
             buzonQuejas-->notificacion;
             notificacion-->|Sí|aviso;
             notificacion-->|No|error;
-            aviso-->cierre;
+            aviso-->cierre([Vuelve a bienvenida]);
             error-->aviso;
     ```
     <br>
