@@ -48,6 +48,8 @@
             queja[Queja]
             sugerencia[Sugerencia]
             felicitacion[Felicitación]
+            anonimato{Definir anonimato}
+
             inicio-->bienvenida;
             bienvenida-->buzonQuejas;
             bienvenida-->efectuar;
@@ -56,6 +58,10 @@
             efectuar-->queja;
             efectuar-->felicitacion;
             efectuar-->sugerencia;
+            denuncia-->anonimato;
+            queja-->anonimato;
+            felicitacion-->anonimato;
+            sugerencia-->anonimato;
     ```
     <br>
     <br>
