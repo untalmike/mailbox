@@ -38,16 +38,19 @@
     - El flujo respeta el siguiente proceso:
 
     ```mermaid
-        graph TD;
+        graph LR;
             buzonQuejas[(buzon_quejas)]
             inicio([Ingreso al buzón de quejas])
+            bienvenida[Bienvenida]
             efectuar{Efectuar}
-            procesoFijo(Proceso Fijo, no se realiza nada)
+            procesoFijo([Proceso Fijo, no se realiza nada])
             denuncia[Denuncia]
             queja[Queja]
             sugerencia[Sugerencia]
             felicitacion[Felicitación]
-            inicio-->efectuar;
+            inicio-->bienvenida;
+            bienvenida-->buzonQuejas;
+            bienvenida-->efectuar;
             efectuar-->|No|procesoFijo;
             efectuar-->denuncia;
             efectuar-->queja;
