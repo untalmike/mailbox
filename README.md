@@ -53,6 +53,16 @@
             numeroUsuario[/Número de empleado/]
             datos{Existen datos}
             plazas[Elegir plaza]
+            plaza{Existe plaza}
+            experiences[Elegir experience]
+            experience{Existe experience}
+            mQueja[/Registrar queja/]
+            mSugerencia[/Registrar sugerencia/]
+            mDenuncia[/Registrar denuncia/]
+            mFelicitacion[/Registrar felicitación/]
+            registro{Existe registro}
+            comentario[/Registrar Comentario final/]
+            registrar[Registrar]
 
             inicio-->bienvenida;
             bienvenida-->buzonQuejas;
@@ -71,7 +81,21 @@
             anonimato-->|Sí|plazas;
             nombreUsuario-->datos;
             numeroUsuario-->datos;
-            datos-->plazas;
+            datos-->|Sí|plazas;
+            plazas-->|Sí|plaza;
+            plaza-->|Sí|experiences;
+            experiences-->experience;
+            experience-->mQueja;
+            experience-->mSugerencia;
+            experience-->mDenuncia;
+            experience-->mFelicitacion;
+            mQueja-->registro;
+            mSugerencia-->registro;
+            mDenuncia-->registro;
+            mFelicitacion-->registro;
+            registro-->|Sí|comentario;
+            comentario-->registrar;
+            registrar-->buzonQuejas;
     ```
     <br>
     <br>
