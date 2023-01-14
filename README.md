@@ -36,14 +36,14 @@
     - You need change the file named utils.jsx, and charge your database on your local service, the file is named template_quejas.sql
 
     - El flujo respeta el siguiente proceso:
+
     ```mermaid
         graph TD;
             ordersDb[(ordersDb)]
             A-->;
             B-->;
-            C-->;cd C:
+            C-->;
             D-->;
-
     ```
     <br>
     <br>
