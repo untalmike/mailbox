@@ -40,10 +40,19 @@
     ```mermaid
         graph TD;
             buzonQuejas[(buzon_quejas)]
-            id1([Ingreso al buzón de quejas])-->B;
-            B[Bienvenida]-->C;
-            C{Efectuar}-->|No|D(Proceso sin acción);
-            C{Efectuar}-->|Sí|E[Denuncia] & C{Efectuar}-->F[Sugerencia] & C{Efectuar}-->G[Queja] & C{Efectuar}-->H[Felicitación];
+            inicio([Ingreso al buzón de quejas])
+            efectuar{Efectuar}
+            procesoFijo(Proceso Fijo, no se realiza nada)
+            denuncia[Denuncia]
+            queja[Queja]
+            sugerencia[Sugerencia]
+            felicitacion[Felicitación]
+            inicio-->efectuar;
+            efectuar-->|No|procesoFijo;
+            efectuar-->denuncia;
+            efectuar-->queja;
+            efectuar-->felicitacion;
+            efectuar-->sugerencia;
     ```
     <br>
     <br>
