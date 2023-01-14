@@ -30,10 +30,11 @@ const Formulario = () => {
         descripcionDenuncia:'', personaFelicitacion:'', porqueFelicitacion:'', reconocimientoFelicitacion:'',
         comentario:'', folio:''
     })
-    
+
     // Arreglo que funciona para elegir experience
     const array_experience = [ "Gonzalo Garza", "Dulce Robles" ];
     const plaza_experience = { "Gonzalo Garza":"Coordinador de TYT Experience", "Dulce Robles":"Experience Querétaro" }
+    const ACCIONES = [ "Queja o Reclamo", "Sugerencia", "Denuncia", "Felicitacion" ]
     
     // Destructuring de los datos de formulario
     const {accion, experience} = respond_form
