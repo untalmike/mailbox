@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import claim from '../../assets/claim.png'
 import suggestion from '../../assets/suggestion.png'
 import complain from '../../assets/complain.png'
@@ -30,7 +30,11 @@ const Formulario = () => {
         descripcionDenuncia:'', personaFelicitacion:'', porqueFelicitacion:'', reconocimientoFelicitacion:'',
         comentario:'', folio:''
     })
-
+    
+    // Arreglo que funciona para elegir experience
+    const array_experience = [ "Gonzalo Garza", "Dulce Robles" ];
+    const plaza_experience = { "Gonzalo Garza":"Coordinador de TYT Experience", "Dulce Robles":"Experience Querétaro" }
+    
     // Destructuring de los datos de formulario
     const {accion, experience} = respond_form
 
@@ -40,7 +44,7 @@ const Formulario = () => {
         
         // Esto sirve para crear el folio
         const DATOS_ACCION = { "Queja o Reclamo":1, "Sugerencia":2, "Denuncia":3, "Felicitacion":4 }
-        const EXPERIENCE_ASIGNADO = { "Gonzalo Garza": 1, "Leyda Blanco": 2 } 
+        const EXPERIENCE_ASIGNADO = { "Gonzalo Garza": 1, "Dulce Robles": 2 } 
 
         if(DATOS_ACCION[accion] === undefined || EXPERIENCE_ASIGNADO[experience] === undefined){
             DATOS_ACCION[accion] = 0
@@ -111,6 +115,8 @@ const Formulario = () => {
                             <Experiences
                                 respond_form={respond_form}
                                 setRespond_form={setRespond_form}
+                                array_experience={array_experience}
+                                plaza_experience={plaza_experience}
                                 botones={botones}
                                 imagenes={imagenes}
                             />
@@ -163,7 +169,7 @@ const Formulario = () => {
                 '${respond_form.horaDenuncia}', '${respond_form.lugarDenuncia}', '${respond_form.descripcionDenuncia}', '${respond_form.personaFelicitacion}',
                 '${respond_form.porqueFelicitacion}', '${respond_form.reconocimientoFelicitacion}', '${respond_form.comentario}', '${folio}', NOW()`
             });
-        
+
             if(!data.estatus && data.return.estatus.length < 0 && data.return.estatus.indexOf('Error:') !== -1){
                 Swal.fire({
                     title: 'Error!',
