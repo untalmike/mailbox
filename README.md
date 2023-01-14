@@ -40,7 +40,7 @@
     ```mermaid
         graph TD;
             id1([Ingreso al buzón de quejas])-->B;
-            B[Bienvenida]-->C LR;
+            B[Bienvenida]-->C;
             C[(buzon_quejas)]-->D;
             D-->D;
     ```
