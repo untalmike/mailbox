@@ -63,7 +63,10 @@
             registro{Existe registro}
             comentario[/Registrar Comentario final/]
             registrar[Registrar]
-
+            id[/id Actual/]
+            notificacion[Notificación correctas e id correcto]
+            aviso{Cerrar aviso}
+            error([No se registra proceso])
             inicio-->bienvenida;
             bienvenida-->buzonQuejas;
             bienvenida-->efectuar;
@@ -82,7 +85,7 @@
             nombreUsuario-->datos;
             numeroUsuario-->datos;
             datos-->|Sí|plazas;
-            plazas-->|Sí|plaza;
+            plazas-->plaza;
             plaza-->|Sí|experiences;
             experiences-->experience;
             experience-->mQueja;
@@ -96,6 +99,13 @@
             registro-->|Sí|comentario;
             comentario-->registrar;
             registrar-->buzonQuejas;
+            buzonQuejas-->id;
+            buzonQuejas-->notificacion;
+            notificacion-->|Sí|aviso;
+            notificacion-->|No|aviso;
+            aviso-->cierre;
+            aviso-->error;
+            error-->bienvenida;
     ```
     <br>
     <br>
