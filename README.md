@@ -71,7 +71,7 @@
             anonimato-->|Sí|plaza;
             nombreUsuario-->datos;
             numeroUsuario-->datos;
-            datos-->plazas:
+            datos-->plazas;
     ```
     <br>
     <br>
