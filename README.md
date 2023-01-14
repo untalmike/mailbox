@@ -49,6 +49,10 @@
             sugerencia[Sugerencia]
             felicitacion[Felicitación]
             anonimato{Definir anonimato}
+            nombreUsuario[/Nombre de usuario]
+            numeroUsuario[/Número de empleado]
+            datos{Existen datos}
+            plazas[Elegir plaza]
 
             inicio-->bienvenida;
             bienvenida-->buzonQuejas;
@@ -62,6 +66,12 @@
             queja-->anonimato;
             felicitacion-->anonimato;
             sugerencia-->anonimato;
+            anonimato-->|No|nombreUsuario;
+            anonimato-->|No|numeroUsuario;
+            anonimato-->|Sí|plaza;
+            nombreUsuario-->datos;
+            numeroUsuario-->datos;
+            datos-->plazas:
     ```
     <br>
     <br>
