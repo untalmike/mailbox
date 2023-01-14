@@ -40,10 +40,10 @@
     ```mermaid
         graph TD;
             ordersDb[(ordersDb)]
-            A-->;
-            B-->;
-            C-->;
-            D-->;
+            A-->B;
+            B-->C;
+            C-->D;
+            D-->D;
     ```
     <br>
     <br>
