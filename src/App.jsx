@@ -5,6 +5,7 @@ import Header from './components/Header'
 function App() {
 
   const [isChecked, setIsChecked] = useState(true)
+  
     //Esta validación sirve para el dark mode
     if(isChecked){
       localStorage.theme = 'dark'
