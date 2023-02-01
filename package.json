@@ -6,6 +6,7 @@
   "author": "Miguel Ángel González López",
   "contributors": "Carlos Eduardo Pérez del Angel",
   "description": "Aplicación desarrollada para TYT expereince, testeo finalizado con jest",
+  "repository": "https://gitlab.com/tyt-central/buzon_quejas",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
