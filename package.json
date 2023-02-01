@@ -1,8 +1,11 @@
 {
   "name": "buzon_quejas",
   "private": true,
-  "version": "0.0.0",
+  "version": "3.8.0",
   "type": "module",
+  "author": "Miguel Ángel González López",
+  "contributors": "Carlos Eduardo Pérez del Angel",
+  "description": "Aplicación desarrollada para TYT expereince, testeo finalizado con jest",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
