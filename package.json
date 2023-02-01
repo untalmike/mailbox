@@ -4,9 +4,8 @@
   "version": "3.8.0",
   "type": "module",
   "author": "Miguel Ángel González López",
-  "contributors": "Carlos Eduardo Pérez del Angel",
-  "description": "Aplicación desarrollada para TYT expereince, testeo finalizado con jest",
-  "repository": "https://gitlab.com/tyt-central/buzon_quejas",
+  "description": "Aplicación que funciona como un elemento de control para un área de control y trato de personal",
+  "repository": "https://github.com/untalmike/mailbox.git",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
